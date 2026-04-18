@@ -13,23 +13,36 @@ const HeroWrapper = styled("section", {
   backgroundColor: betaniaColors.cream,
 });
 
-const HeroBg = styled("div", {
+const HeroLogoBackdrop = styled("div", {
   position: "absolute",
   inset: 0,
-  backgroundImage: "url(/hero-bg.webp)",
-  backgroundSize: "cover",
-  backgroundPosition: "center 40%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "$400 $100",
+  pointerEvents: "none",
   "&::after": {
     content: "",
     position: "absolute",
     inset: 0,
     background: `linear-gradient(
       to bottom,
-      rgba(250,249,246,0.35) 0%,
-      rgba(250,249,246,0.15) 40%,
-      rgba(250,249,246,0.55) 100%
+      rgba(250,249,246,0.5) 0%,
+      rgba(250,249,246,0.25) 45%,
+      rgba(250,249,246,0.65) 100%
     )`,
   },
+});
+
+const HeroLogo = styled("img", {
+  position: "relative",
+  zIndex: 0,
+  width: "min(92vw, 640px)",
+  height: "auto",
+  maxHeight: "72vh",
+  objectFit: "contain",
+  opacity: 0.2,
+  userSelect: "none",
 });
 
 const ParallaxLayer = styled("div", {
@@ -187,12 +200,19 @@ export default function Hero() {
 
   return (
     <HeroWrapper id="hero">
-      <HeroBg
+      <HeroLogoBackdrop
         as={motion.div}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
+        initial={{ scale: 1.06, opacity: 0.85 }}
+        animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 8, ease: "easeOut" }}
-      />
+      >
+        <HeroLogo
+          src="/logos/logo-master.svg"
+          alt=""
+          decoding="async"
+          draggable={false}
+        />
+      </HeroLogoBackdrop>
       <ParallaxLayer />
 
       <Content
