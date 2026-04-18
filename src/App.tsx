@@ -1,5 +1,5 @@
 import { betaniaGlobalStyles } from "./theme/betaniaTheme";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/nav/Navbar";
 import Hero from "./components/Hero";
 import ServiceTimes from "./components/ServiceTimes";
 import WhatToExpect from "./components/WhatToExpect";

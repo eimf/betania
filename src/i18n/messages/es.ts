@@ -16,6 +16,59 @@ const es: Translations = {
     closeMenu: "Cerrar menu",
     openMenu: "Abrir menu",
   },
+  pathNav: {
+    menu: "Menu",
+    title: "Camino a Betania",
+    subtitle: "Un sendero iluminado hacia tu proxima parada",
+    close: "Cerrar navegacion",
+    waypoints: {
+      hero: {
+        label: "Inicio",
+        microcopy: "Bienvenido a casa. Comienza aqui tu recorrido por Betania.",
+      },
+      horarios: {
+        label: "Reuniones",
+        microcopy: "Encuentra los dias y horas para reunirte con nosotros esta semana.",
+        ctaLabel: "Ver horarios",
+      },
+      queEsperar: {
+        label: "Que esperar",
+        microcopy: "Descubre como es una visita por primera vez, sin sorpresas ni presion.",
+      },
+      conserjeria: {
+        label: "Conserjeria",
+        microcopy: "Alguien te estara esperando. Pide ayuda o cuentanos tu historia.",
+        ctaLabel: "Pide ayuda",
+      },
+      historia: {
+        label: "Nuestra historia",
+        microcopy: "Una comunidad nacida del amor de Cristo, como en la casa de Maria y Marta.",
+      },
+      ministerios: {
+        label: "Ministerios",
+        microcopy: "Espacios para crecer: jovenes, familia, adoracion y servicio.",
+      },
+      bautismos: {
+        label: "Bautismos",
+        microcopy: "Da el paso publico de tu fe. Te acompanamos en cada etapa.",
+        ctaLabel: "Quiero bautizarme",
+      },
+      conectar: {
+        label: "Ver y conectar",
+        microcopy: "Mira las predicas recientes y siguenos en nuestras redes.",
+      },
+      donaciones: {
+        label: "Donaciones",
+        microcopy: "Tu generosidad sostiene la mision de Betania y a quienes servimos.",
+        ctaLabel: "Dar ahora",
+      },
+      contacto: {
+        label: "Oracion y contacto",
+        microcopy: "Escribenos una peticion de oracion o contactanos directamente.",
+        ctaLabel: "Pedir oracion",
+      },
+    },
+  },
   hero: {
     badge: "Iglesia Betania",
     title1: "Bienvenido a casa.",

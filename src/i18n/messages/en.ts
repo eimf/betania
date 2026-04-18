@@ -16,6 +16,59 @@ const en: Translations = {
     closeMenu: "Close menu",
     openMenu: "Open menu",
   },
+  pathNav: {
+    menu: "Menu",
+    title: "Path to Bethany",
+    subtitle: "A lantern-lit trail to your next stop",
+    close: "Close navigation",
+    waypoints: {
+      hero: {
+        label: "Home",
+        microcopy: "Welcome home. Begin your journey through Betania here.",
+      },
+      horarios: {
+        label: "Gatherings",
+        microcopy: "Find the days and times to join us this week.",
+        ctaLabel: "See service times",
+      },
+      queEsperar: {
+        label: "What to Expect",
+        microcopy: "Discover what a first visit feels like, with no surprises or pressure.",
+      },
+      conserjeria: {
+        label: "Welcome Desk",
+        microcopy: "Someone will be waiting for you. Ask for help or share your story.",
+        ctaLabel: "Ask for help",
+      },
+      historia: {
+        label: "Our Story",
+        microcopy: "A community born from the love of Christ, like in Mary and Martha's home.",
+      },
+      ministerios: {
+        label: "Ministries",
+        microcopy: "Spaces to grow: youth, family, worship, and service.",
+      },
+      bautismos: {
+        label: "Baptisms",
+        microcopy: "Take the public step of your faith. We walk with you every stage.",
+        ctaLabel: "I want to be baptized",
+      },
+      conectar: {
+        label: "Watch & Connect",
+        microcopy: "Watch recent sermons and follow us on our social channels.",
+      },
+      donaciones: {
+        label: "Giving",
+        microcopy: "Your generosity sustains Betania's mission and those we serve.",
+        ctaLabel: "Give now",
+      },
+      contacto: {
+        label: "Prayer & Contact",
+        microcopy: "Send us a prayer request or reach out directly.",
+        ctaLabel: "Request prayer",
+      },
+    },
+  },
   hero: {
     badge: "Betania Church",
     title1: "Welcome home.",

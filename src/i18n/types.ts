@@ -31,6 +31,12 @@ interface PostItem {
   meta: string;
 }
 
+interface WaypointCopy {
+  label: string;
+  microcopy: string;
+  ctaLabel?: string;
+}
+
 export interface Translations {
   nav: {
     brand: string;
@@ -46,6 +52,24 @@ export interface Translations {
     cta: string;
     closeMenu: string;
     openMenu: string;
+  };
+  pathNav: {
+    menu: string;
+    title: string;
+    subtitle: string;
+    close: string;
+    waypoints: {
+      hero: WaypointCopy;
+      horarios: WaypointCopy;
+      queEsperar: WaypointCopy;
+      conserjeria: WaypointCopy;
+      historia: WaypointCopy;
+      ministerios: WaypointCopy;
+      bautismos: WaypointCopy;
+      conectar: WaypointCopy;
+      donaciones: WaypointCopy;
+      contacto: WaypointCopy;
+    };
   };
   hero: {
     badge: string;
