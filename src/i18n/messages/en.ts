@@ -1,0 +1,301 @@
+import type { Translations } from "../types";
+
+const en: Translations = {
+  nav: {
+    brand: "Betania Church",
+    horarios: "Service Times",
+    queEsperar: "What to Expect",
+    conserjeria: "Welcome Desk",
+    historia: "Our Story",
+    ministerios: "Ministries",
+    bautismos: "Baptisms",
+    conectar: "Connect",
+    donaciones: "Giving",
+    contacto: "Contact",
+    cta: "Prayer Request",
+    closeMenu: "Close menu",
+    openMenu: "Open menu",
+  },
+  hero: {
+    badge: "Betania Church",
+    title1: "Welcome home.",
+    title2: "Rise and live.",
+    subtitle:
+      "Like Bethany of old, there is a place for you here: a home of faith, friendship, and new life. For God so loved the world that He gave.",
+    ctaPrimary: "Service times",
+    ctaSecondary: "Plan your visit",
+    scroll: "Discover",
+  },
+  serviceTimes: {
+    label: "Service Times",
+    title: "Join us every week",
+    subtitle:
+      "Every gathering is an opportunity to grow, worship, and connect in community.",
+    directions: "Get directions",
+    services: [
+      {
+        title: "Sunday Service",
+        day: "Sundays",
+        time: "10:00 AM",
+        description: "Worship, the Word, and fellowship for the whole family.",
+      },
+      {
+        title: "Bible Study",
+        day: "Wednesdays",
+        time: "7:00 PM",
+        description: "Going deeper together into the Word of God.",
+      },
+      {
+        title: "Youth",
+        day: "Fridays",
+        time: "7:30 PM",
+        description: "A vibrant space for the next generation.",
+      },
+      {
+        title: "Kids Church",
+        day: "Sundays",
+        time: "10:00 AM",
+        description: "Creative and safe teaching for the little ones.",
+      },
+    ],
+  },
+  whatToExpect: {
+    label: "Your First Visit",
+    title: "What to expect",
+    subtitle:
+      "It doesn't matter where you come from or what you're going through. There is a place prepared for you here.",
+    items: [
+      {
+        title: "Warm environment",
+        text: "From your first step, you'll be greeted with a genuine smile.",
+      },
+      {
+        title: "Living worship",
+        text: "Music that connects the heart with the presence of God.",
+      },
+      {
+        title: "Relevant teaching",
+        text: "Practical, biblical messages for your daily life.",
+      },
+      {
+        title: "Kids church",
+        text: "A safe, fun space full of teaching for your children.",
+      },
+      {
+        title: "Come as you are",
+        text: "No dress code. Come comfortable and be yourself.",
+      },
+      {
+        title: "Real community",
+        text: "Real people walking together in faith, hope, and love.",
+      },
+    ],
+  },
+  conserjeria: {
+    label: "Welcome Desk",
+    title: "We're ready to welcome you",
+    subtitle:
+      "We want your experience to be warm from the very first moment. Our team is here for you.",
+    cards: [
+      {
+        title: "Welcome",
+        text: "A dedicated team will greet you with open arms and guide you through your first visit.",
+      },
+      {
+        title: "Directions",
+        text: "We'll help you with clear directions so you can reach us without any trouble.",
+      },
+      {
+        title: "First time?",
+        text: "Don't worry about a thing. We have a special process to make you feel right at home.",
+      },
+      {
+        title: "Prayer & support",
+        text: "If you need prayer or someone to talk to, we're here to walk alongside you.",
+      },
+    ],
+    cta: "Talk to our team",
+    formName: "Your name",
+    formContact: "Email or phone",
+    formMessage: "How can we help you?",
+    formSubmit: "Send",
+    formSuccess: "Thank you — we'll be in touch soon.",
+  },
+  story: {
+    label: "Our Identity",
+    title: "Betania: where love restores what the world forgets",
+    narrative1:
+      "Bethany was a small village two miles from Jerusalem, on the slopes of the Mount of Olives. Mary, Martha, and Lazarus lived there — close friends of Jesus. In that home, Jesus found rest, friendship, and a place where He was received with genuine love. It was also in Bethany where Jesus called Lazarus back to life, showing that His power conquers even death.",
+    narrative2:
+      "John 3:16 is the verse that captures the heart of God: a love so great that He gave everything so we could have eternal life. Betania Church is born from the union of these two truths: we are a home where you are welcome, and a place where new life is possible.",
+    verse:
+      "For God so loved the world, that He gave His only Son, that whoever believes in Him should not perish but have eternal life.",
+    verseRef: "John 3:16",
+    pills: ["Welcome home", "Love that gives life", "Faith that restores"],
+  },
+  ministries: {
+    label: "Ministries",
+    title: "Find your place",
+    subtitle:
+      "Each ministry is a family within the family. There's a space designed for your stage of life.",
+    learnMore: "Learn more",
+    items: [
+      {
+        title: "Kids",
+        description:
+          "Shaping hearts from an early age with love and creativity.",
+      },
+      {
+        title: "Youth",
+        description:
+          "A generation that worships, serves, and transforms their community.",
+      },
+      {
+        title: "Women",
+        description:
+          "Women growing stronger together in faith and purpose.",
+      },
+      {
+        title: "Men",
+        description:
+          "Men of integrity, leading by the example of Christ.",
+      },
+      {
+        title: "Discipleship",
+        description: "Spiritual growth step by step, in community.",
+      },
+      {
+        title: "Prayer",
+        description: "Intercession and seeking the heart of God.",
+      },
+      {
+        title: "Service",
+        description: "Willing hands to bless our community.",
+      },
+    ],
+  },
+  baptisms: {
+    label: "Baptisms",
+    title: "Take the next step of faith",
+    subtitle:
+      "Baptism is a public declaration of your faith in Jesus. It's a beautiful step we celebrate together as a family.",
+    whatIs: {
+      title: "What is baptism?",
+      text: "Baptism is an act of obedience and faith that symbolizes your new life in Christ. As you go under the water and come back up, you represent dying to the past and rising to new life.",
+    },
+    whoCan: {
+      title: "Who can be baptized?",
+      text: "Anyone who has made the decision to follow Jesus as their Lord and Savior. Your age or history doesn't matter — what matters is your decision of faith.",
+    },
+    nextSteps: {
+      title: "Next steps",
+      text: "Fill out the form below and a leader will get in touch with you to prepare and walk with you through this important step.",
+    },
+    cta: "I want to be baptized",
+    formName: "Your name",
+    formAge: "Age (optional)",
+    formContact: "Phone or email",
+    formQuestions: "Questions or comments",
+    formLeader: "I'd like to talk to a leader",
+    formSubmit: "Submit request",
+    formSuccess:
+      "We received your request. A leader will reach out to you soon.",
+  },
+  watchConnect: {
+    label: "Watch & Connect",
+    title: "We're where you are",
+    subtitle:
+      "Don't miss any message. Follow us on our platforms and be part of the community beyond Sunday.",
+    subscribe: "Subscribe",
+    follow: "Follow",
+    ytThumbs: [
+      { title: "Sunday Service — Word of Life", meta: "3 days ago" },
+      { title: "Live Worship — Night of Praise", meta: "1 week ago" },
+      { title: "John 3:16 Study — Betania Series", meta: "2 weeks ago" },
+      { title: "Testimony — New Life in Christ", meta: "3 weeks ago" },
+    ],
+    fbPosts: [
+      {
+        text: "This Sunday we celebrated God's faithfulness together. Thanks to every family who was part of it. See you next Sunday.",
+        meta: "2 days ago — 45 reactions",
+      },
+      {
+        text: "Prayer night this Wednesday. Come with your family, there's room for everyone. God has something prepared for you.",
+        meta: "5 days ago — 32 reactions",
+      },
+      {
+        text: "Welcome to the new members of our Betania family. Your lives inspire us to keep going.",
+        meta: "1 week ago — 58 reactions",
+      },
+    ],
+  },
+  donations: {
+    label: "Giving",
+    title: "Your generosity transforms lives",
+    subtitle:
+      "Every offering is a seed of love that impacts our community and beyond.",
+    methods: [
+      {
+        title: "In person",
+        text: "You can give your offering during any service. Our team will receive it with gratitude.",
+      },
+      {
+        title: "Bank transfer",
+        text: "Make a direct bank transfer. Contact us to get the account details.",
+      },
+      {
+        title: "Online",
+        text: "We will soon enable a secure and easy-to-use online donation platform.",
+        comingSoon: "Coming soon",
+      },
+    ],
+    whereItGoes: {
+      title: "Where does it go?",
+      items: [
+        "Community programs and social assistance",
+        "Local and international missions",
+        "Investing in the next generation",
+      ],
+    },
+    faq: [
+      {
+        q: "Is my donation tax-deductible?",
+        a: "Check with your tax advisor. We can provide you with a donation receipt.",
+      },
+      {
+        q: "Can I set up recurring donations?",
+        a: "Yes, you can set up a monthly donation. Contact us for more details.",
+      },
+      {
+        q: "How are funds managed?",
+        a: "We have a transparent administration team that reports to the congregation.",
+      },
+    ],
+    ctaPrimary: "Contact us about giving",
+    faqTitle: "Frequently asked questions",
+  },
+  prayerContact: {
+    label: "Prayer & Contact",
+    title: "We want to pray for you",
+    subtitle:
+      "You don't have to walk alone. Share your request and our team will pray with you this week.",
+    formName: "Your name",
+    formContact: "Email or phone",
+    formMessage: "Write your message or prayer request...",
+    formPrayer: "I want someone to pray for me",
+    formSubmit: "Send message",
+    formSuccess:
+      "Thank you for trusting us. Your request has been received and our team will be praying for you. God bless you.",
+  },
+  footer: {
+    brand: "Betania Church",
+    brandText:
+      "A home of faith, friendship, and new life. Where the love of John 3:16 is lived every day in community.",
+    links: "Links",
+    schedules: "Service Times",
+    contact: "Contact",
+    copyright: "Betania Church. All rights reserved.",
+  },
+};
+
+export default en;
