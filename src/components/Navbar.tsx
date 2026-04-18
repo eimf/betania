@@ -158,13 +158,7 @@ export default function Navbar() {
         }}
       >
         <NavInner>
-          <Logo href="#">
-            <img
-              src="/logos/logo-master.svg"
-              alt={t.nav.brand}
-              style={{ height: "36px", width: "auto", display: "block" }}
-            />
-          </Logo>
+          <Logo href="#">{t.nav.brand}</Logo>
           <NavLinks>
             {navItems.map((item) => (
               <NavLink key={item.href} href={item.href}>
@@ -241,18 +235,6 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.05 }}
-            style={{ marginBottom: "1rem" }}
-          >
-            <img
-              src="/logos/logo-master.svg"
-              alt={t.nav.brand}
-              style={{ height: "40px", width: "auto", filter: "invert(1)" }}
-            />
-          </motion.div>
           {navItems.map((item, i) => (
             <motion.div
               key={item.href}
