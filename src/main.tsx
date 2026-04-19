@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { globalStyles } from "@washingtonpost/wpds-ui-kit";
 import { I18nProvider } from "./i18n/I18nContext";
 import App from "./App";
@@ -8,8 +9,10 @@ globalStyles();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <I18nProvider>
-      <App />
-    </I18nProvider>
+    <BrowserRouter>
+      <I18nProvider>
+        <App />
+      </I18nProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );

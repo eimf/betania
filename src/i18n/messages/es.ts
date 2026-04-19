@@ -3,6 +3,7 @@ import type { Translations } from "../types";
 const es: Translations = {
   nav: {
     brand: "Iglesia Betania",
+    live: "Ver en Vivo",
     horarios: "Horarios",
     queEsperar: "Que esperar",
     conserjeria: "Conserjeria",
@@ -18,43 +19,72 @@ const es: Translations = {
   },
   hero: {
     badge: "Iglesia Betania",
-    title1: "Bienvenido a casa.",
-    title2: "Levantate y vive.",
-    subtitle:
-      "Como en Betania, aqui hay un lugar para ti: un hogar de fe, amistad y vida nueva. Porque de tal manera amo Dios al mundo, que dio.",
-    ctaPrimary: "Ver horarios",
-    ctaSecondary: "Planifica tu visita",
+    headline: "Bienvenidos a Iglesia Betania",
+    subheadline:
+      "Un lugar para crecer en fe, familia y prop\u00f3sito",
+    ctaLive: "Ver en Vivo",
+    ctaPlanVisit: "Planear tu Visita",
+    ctaAbout: "Conócenos",
     scroll: "Descubre",
+    imageAlt:
+      "Personas de la congregacion reunidas en comunidad, sonriendo y conversando.",
+  },
+  newHere: {
+    title: "¿Nuevo aquí?",
+    cards: [
+      {
+        id: "horarios",
+        title: "Horarios",
+        line: "Domingo y mi\u00e9rcoles en CST: revisa la agenda principal.",
+      },
+      {
+        id: "ubicacion",
+        title: "Ubicaci\u00f3n",
+        line: "Direcci\u00f3n y c\u00f3mo llegar a nuestras instalaciones.",
+      },
+      {
+        id: "expect",
+        title: "Qu\u00e9 esperar",
+        line: "Tu primera visita, paso a paso, sin sorpresas.",
+      },
+      {
+        id: "kids",
+        title: "Ni\u00f1os",
+        line: "Un lugar seguro y lleno de vida para las familias.",
+      },
+    ],
   },
   serviceTimes: {
     label: "Horarios",
     title: "Encuentranos cada semana",
     subtitle:
       "Cada reunion es una oportunidad para crecer, adorar y conectar en comunidad.",
+    scheduleSummary:
+      "Domingo 11:00 a. m. — Mi\u00e9rcoles 7:00 p. m. CST",
     directions: "Como llegar",
     services: [
       {
-        title: "Servicio Dominical",
+        title: "Servicio dominical",
         day: "Domingos",
-        time: "10:00 AM",
+        time: "11:00 a. m. CST",
         description: "Adoracion, Palabra y comunion para toda la familia.",
       },
       {
-        title: "Estudio Biblico",
-        day: "Miercoles",
-        time: "7:00 PM",
+        title: "Reunion de mitad de semana",
+        day: "Mi\u00e9rcoles",
+        time: "7:00 p. m. CST",
         description: "Profundizamos juntos en la Palabra de Dios.",
       },
       {
         title: "Jovenes",
         day: "Viernes",
-        time: "7:30 PM",
+        time: "Consulta en sala",
         description: "Un espacio vibrante para la nueva generacion.",
       },
       {
-        title: "Iglesia de Ninos",
+        title: "Iglesia de ninos",
         day: "Domingos",
-        time: "10:00 AM",
+        time: "Durante el servicio",
         description: "Ensenanza creativa y segura para los mas pequenos.",
       },
     ],
@@ -123,7 +153,8 @@ const es: Translations = {
   },
   story: {
     label: "Nuestra identidad",
-    title: "Betania: donde el amor restaura lo que el mundo olvida",
+    titleLine1: "Betania: donde el amor",
+    titleLine2: "resucita lo que el mundo olvida",
     narrative1:
       "Betania era una pequena aldea a dos millas de Jerusalen, en las faldas del Monte de los Olivos. Alli vivian Maria, Marta y Lazaro, amigos cercanos de Jesus. En esa casa, Jesus encontro descanso, amistad y un lugar donde ser recibido con amor genuino. Fue tambien en Betania donde Jesus llamo a Lazaro de vuelta a la vida, mostrando que su poder vence hasta la muerte.",
     narrative2:
@@ -139,6 +170,8 @@ const es: Translations = {
     subtitle:
       "Cada ministerio es una familia dentro de la familia. Hay un espacio disenado para tu etapa de vida.",
     learnMore: "Conocer mas",
+    pageBack: "Volver a ministerios",
+    pageContactCta: "Escribenos",
     items: [
       {
         title: "Ninos",
@@ -171,6 +204,64 @@ const es: Translations = {
       {
         title: "Servicio",
         description: "Manos dispuestas para bendecir a nuestra comunidad.",
+      },
+    ],
+    detailPages: [
+      {
+        intro:
+          "Amamos a las familias y queremos que los ninos conozcan a Jesus con alegria y en un ambiente seguro.",
+        paragraphs: [
+          "Cada domingo ofrecemos ensenanza adaptada a su edad, con equipos capacitados y protocolos claros de bienvenida.",
+          "Si es tu primera visita, podemos acompanarte al salon y presentarte a los lideres del area.",
+        ],
+      },
+      {
+        intro:
+          "Creemos que la juventud tiene un llamado unico para adorar a Dios y servir a la ciudad.",
+        paragraphs: [
+          "Nos reunimos para alabanza, Palabra y espacios de amistad donde puedas ser escuchado.",
+          "Hay lugar para preguntas, creatividad y mision: caminamos juntos en esta etapa.",
+        ],
+      },
+      {
+        intro:
+          "Un espacio para mujeres que desean crecer en fe, amistad y descanso en comunidad.",
+        paragraphs: [
+          "Tiempos de estudio, oracion y celebracion que nutren el alma y fortalecen el hogar.",
+          "No importa tu historia: aqui hay un asiento para ti.",
+        ],
+      },
+      {
+        intro:
+          "Hombres que buscan integridad, responsabilidad y hermandad al estilo de Jesus.",
+        paragraphs: [
+          "Encuentros para conversar con franqueza, orar y servir juntos.",
+          "Queremos ser referentes de amor y servicio en la familia y en la ciudad.",
+        ],
+      },
+      {
+        intro:
+          "El discipulado es caminar con alguien mas experimentado mientras aprendemos a seguir a Jesus.",
+        paragraphs: [
+          "Grupos pequenos, lectura biblica y retos practicos para la vida diaria.",
+          "Te ayudamos a dar el siguiente paso con acompanamiento real.",
+        ],
+      },
+      {
+        intro:
+          "La oracion es el latido de nuestra iglesia: acercarnos al Padre con confianza.",
+        paragraphs: [
+          "Hay espacios corporativos y equipos que interceden por necesidades concretas.",
+          "Comparte tu peticion y ora con nosotros: no caminas solo.",
+        ],
+      },
+      {
+        intro:
+          "Servir es imitar a Jesus: manos generosas que bendicen vecinos y ciudad.",
+        paragraphs: [
+          "Proyectos locales, visitas y equipos listos para cuando surja una necesidad.",
+          "Si quieres ofrecer tu tiempo o talento, aqui encontraras puertas abiertas.",
+        ],
       },
     ],
   },
@@ -206,34 +297,9 @@ const es: Translations = {
     title: "Estamos donde tu estas",
     subtitle:
       "No te pierdas ningun mensaje. Siguenos en nuestras plataformas y se parte de la comunidad mas alla del domingo.",
-    subscribe: "Suscribete",
-    follow: "Seguir",
-    ytThumbs: [
-      { title: "Servicio Dominical — Palabra de vida", meta: "Hace 3 dias" },
-      {
-        title: "Adoracion en vivo — Noche de alabanza",
-        meta: "Hace 1 semana",
-      },
-      {
-        title: "Estudio de Juan 3:16 — Serie Betania",
-        meta: "Hace 2 semanas",
-      },
-      { title: "Testimonio — Nueva vida en Cristo", meta: "Hace 3 semanas" },
-    ],
-    fbPosts: [
-      {
-        text: "Este domingo celebramos juntos la fidelidad de Dios. Gracias a cada familia que fue parte. Nos vemos el proximo domingo.",
-        meta: "Hace 2 dias — 45 reacciones",
-      },
-      {
-        text: "Noche de oracion este miercoles. Ven con tu familia, hay espacio para todos. Dios tiene algo preparado para ti.",
-        meta: "Hace 5 dias — 32 reacciones",
-      },
-      {
-        text: "Bienvenidos los nuevos miembros de nuestra familia Betania. Su vida nos inspira a seguir adelante.",
-        meta: "Hace 1 semana — 58 reacciones",
-      },
-    ],
+    youtubeComingSoon: "YouTube: proximamente.",
+    facebookFollowLead: "Siguenos en ",
+    comingSoon: "Proximamente",
   },
   donations: {
     label: "Donaciones",

@@ -1,5 +1,6 @@
 import { styled } from "@washingtonpost/wpds-ui-kit";
 import { siteInfo } from "../data/siteData";
+import { externalUrls, homeHash } from "../data/links";
 import { betaniaColors } from "../theme/betaniaTheme";
 import { useI18n } from "../i18n/I18nContext";
 
@@ -117,15 +118,15 @@ export default function Footer() {
   const { t } = useI18n();
 
   const navLinks = [
-    { label: t.nav.horarios, href: "#horarios" },
-    { label: t.nav.queEsperar, href: "#que-esperar" },
-    { label: t.nav.conserjeria, href: "#conserjeria" },
-    { label: t.nav.historia, href: "#historia" },
-    { label: t.nav.ministerios, href: "#ministerios" },
-    { label: t.nav.bautismos, href: "#bautismos" },
-    { label: t.nav.conectar, href: "#conectar" },
-    { label: t.nav.donaciones, href: "#donaciones" },
-    { label: t.nav.contacto, href: "#contacto" },
+    { label: t.nav.horarios, href: homeHash("#horarios") },
+    { label: t.nav.queEsperar, href: homeHash("#que-esperar") },
+    { label: t.nav.conserjeria, href: homeHash("#conserjeria") },
+    { label: t.nav.historia, href: homeHash("#historia") },
+    { label: t.nav.ministerios, href: homeHash("#ministerios") },
+    { label: t.nav.bautismos, href: homeHash("#bautismos") },
+    { label: t.nav.conectar, href: homeHash("#conectar") },
+    { label: t.nav.donaciones, href: homeHash("#donaciones") },
+    { label: t.nav.contacto, href: homeHash("#contacto") },
   ];
 
   return (
@@ -148,11 +149,7 @@ export default function Footer() {
 
           <div>
             <ColTitle>{t.footer.schedules}</ColTitle>
-            {t.serviceTimes.services.map((s, i) => (
-              <ColText key={i}>
-                {s.day}: {s.time}
-              </ColText>
-            ))}
+            <ColText>{t.serviceTimes.scheduleSummary}</ColText>
           </div>
 
           <div>
@@ -183,7 +180,7 @@ export default function Footer() {
               </svg>
             </SocialLink>
             <SocialLink
-              href={siteInfo.facebook}
+              href={externalUrls.facebookPage}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

@@ -3,6 +3,7 @@ import type { Translations } from "../types";
 const en: Translations = {
   nav: {
     brand: "Betania Church",
+    live: "Watch live",
     horarios: "Service Times",
     queEsperar: "What to Expect",
     conserjeria: "Welcome Desk",
@@ -18,43 +19,72 @@ const en: Translations = {
   },
   hero: {
     badge: "Betania Church",
-    title1: "Welcome home.",
-    title2: "Rise and live.",
-    subtitle:
-      "Like Bethany of old, there is a place for you here: a home of faith, friendship, and new life. For God so loved the world that He gave.",
-    ctaPrimary: "Service times",
-    ctaSecondary: "Plan your visit",
+    headline: "Welcome to Betania Church",
+    subheadline:
+      "A place to grow in faith, family, and purpose.",
+    ctaLive: "Watch live",
+    ctaPlanVisit: "Plan your visit",
+    ctaAbout: "Get to know us",
     scroll: "Discover",
+    imageAlt:
+      "Church members gathered in community, smiling and talking together.",
+  },
+  newHere: {
+    title: "New here?",
+    cards: [
+      {
+        id: "horarios",
+        title: "Service times",
+        line: "Sunday and Wednesday gatherings in CST.",
+      },
+      {
+        id: "ubicacion",
+        title: "Location",
+        line: "Address and directions to our meeting place.",
+      },
+      {
+        id: "expect",
+        title: "What to expect",
+        line: "Your first visit, step by step, with no surprises.",
+      },
+      {
+        id: "kids",
+        title: "Kids",
+        line: "A safe, joyful environment for families.",
+      },
+    ],
   },
   serviceTimes: {
     label: "Service Times",
     title: "Join us every week",
     subtitle:
       "Every gathering is an opportunity to grow, worship, and connect in community.",
+    scheduleSummary:
+      "Sunday 11:00 AM — Wednesday 7:00 PM CST",
     directions: "Get directions",
     services: [
       {
-        title: "Sunday Service",
+        title: "Sunday service",
         day: "Sundays",
-        time: "10:00 AM",
+        time: "11:00 AM CST",
         description: "Worship, the Word, and fellowship for the whole family.",
       },
       {
-        title: "Bible Study",
+        title: "Midweek gathering",
         day: "Wednesdays",
-        time: "7:00 PM",
+        time: "7:00 PM CST",
         description: "Going deeper together into the Word of God.",
       },
       {
         title: "Youth",
         day: "Fridays",
-        time: "7:30 PM",
+        time: "Ask in the lobby",
         description: "A vibrant space for the next generation.",
       },
       {
-        title: "Kids Church",
+        title: "Kids church",
         day: "Sundays",
-        time: "10:00 AM",
+        time: "During the service",
         description: "Creative and safe teaching for the little ones.",
       },
     ],
@@ -123,7 +153,8 @@ const en: Translations = {
   },
   story: {
     label: "Our Identity",
-    title: "Betania: where love restores what the world forgets",
+    titleLine1: "Betania: where love",
+    titleLine2: "resurrects what the world forgets",
     narrative1:
       "Bethany was a small village two miles from Jerusalem, on the slopes of the Mount of Olives. Mary, Martha, and Lazarus lived there — close friends of Jesus. In that home, Jesus found rest, friendship, and a place where He was received with genuine love. It was also in Bethany where Jesus called Lazarus back to life, showing that His power conquers even death.",
     narrative2:
@@ -139,6 +170,8 @@ const en: Translations = {
     subtitle:
       "Each ministry is a family within the family. There's a space designed for your stage of life.",
     learnMore: "Learn more",
+    pageBack: "Back to ministries",
+    pageContactCta: "Contact us",
     items: [
       {
         title: "Kids",
@@ -171,6 +204,64 @@ const en: Translations = {
       {
         title: "Service",
         description: "Willing hands to bless our community.",
+      },
+    ],
+    detailPages: [
+      {
+        intro:
+          "We love families and want children to meet Jesus with joy in a safe, welcoming environment.",
+        paragraphs: [
+          "Each Sunday we offer age-appropriate teaching with trained teams and clear check-in practices.",
+          "On your first visit, we can walk you to the room and introduce you to the area leaders.",
+        ],
+      },
+      {
+        intro:
+          "We believe young people have a unique calling to worship God and serve our city.",
+        paragraphs: [
+          "We gather for worship, the Word, and friendship where you can be heard.",
+          "There is room for questions, creativity, and mission—we walk this season together.",
+        ],
+      },
+      {
+        intro:
+          "A space for women who want to grow in faith, friendship, and rest in community.",
+        paragraphs: [
+          "Study, prayer, and celebration that nourish the soul and strengthen the home.",
+          "Whatever your story, there is a seat for you here.",
+        ],
+      },
+      {
+        intro:
+          "Men pursuing integrity, responsibility, and brotherhood in the way of Jesus.",
+        paragraphs: [
+          "Gatherings for honest conversation, prayer, and serving side by side.",
+          "We want to model love and service in our families and in the city.",
+        ],
+      },
+      {
+        intro:
+          "Discipleship is walking with someone a little further along as we learn to follow Jesus.",
+        paragraphs: [
+          "Small groups, Scripture, and practical challenges for everyday life.",
+          "We help you take your next step with real companionship.",
+        ],
+      },
+      {
+        intro:
+          "Prayer is the heartbeat of our church: drawing near to the Father with confidence.",
+        paragraphs: [
+          "There are corporate gatherings and teams who intercede for specific needs.",
+          "Share your request and pray with us—you are not alone.",
+        ],
+      },
+      {
+        intro:
+          "Serving looks like Jesus: generous hands that bless neighbors and our city.",
+        paragraphs: [
+          "Local projects, visits, and teams ready when a need arises.",
+          "If you want to offer your time or talent, you will find open doors here.",
+        ],
       },
     ],
   },
@@ -206,28 +297,9 @@ const en: Translations = {
     title: "We're where you are",
     subtitle:
       "Don't miss any message. Follow us on our platforms and be part of the community beyond Sunday.",
-    subscribe: "Subscribe",
-    follow: "Follow",
-    ytThumbs: [
-      { title: "Sunday Service — Word of Life", meta: "3 days ago" },
-      { title: "Live Worship — Night of Praise", meta: "1 week ago" },
-      { title: "John 3:16 Study — Betania Series", meta: "2 weeks ago" },
-      { title: "Testimony — New Life in Christ", meta: "3 weeks ago" },
-    ],
-    fbPosts: [
-      {
-        text: "This Sunday we celebrated God's faithfulness together. Thanks to every family who was part of it. See you next Sunday.",
-        meta: "2 days ago — 45 reactions",
-      },
-      {
-        text: "Prayer night this Wednesday. Come with your family, there's room for everyone. God has something prepared for you.",
-        meta: "5 days ago — 32 reactions",
-      },
-      {
-        text: "Welcome to the new members of our Betania family. Your lives inspire us to keep going.",
-        meta: "1 week ago — 58 reactions",
-      },
-    ],
+    youtubeComingSoon: "YouTube: coming soon.",
+    facebookFollowLead: "Follow us on ",
+    comingSoon: "Coming soon",
   },
   donations: {
     label: "Giving",

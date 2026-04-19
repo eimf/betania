@@ -1,11 +1,16 @@
+import { externalUrls } from "./links";
+
 export const siteInfo = {
   name: "Iglesia Betania",
-  address: "Direccion por confirmar",
+  address: "2100 Fir Ave W, McAllen, TX 78501",
   phone: "+1 (000) 000-0000",
   email: "contacto@iglesiabetania.org",
   youtube: "https://youtube.com/@IGLESIABETANIA",
-  facebook: "https://facebook.com/IGLESIABETANIA",
+  facebook: externalUrls.facebookPage,
 };
+
+/** Google Maps search for `siteInfo.address` (same as “Cómo llegar” / directions). */
+export const googleMapsSearchUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(siteInfo.address)}`;
 
 export interface ServiceTime {
   id: string;
@@ -21,7 +26,7 @@ export const serviceTimes: ServiceTime[] = [
     id: "domingo",
     title: "Servicio Dominical",
     day: "Domingos",
-    time: "10:00 AM",
+    time: "11:00 AM CST",
     description: "Adoración, Palabra y comunión para toda la familia.",
     icon: "sun",
   },
@@ -29,7 +34,7 @@ export const serviceTimes: ServiceTime[] = [
     id: "miercoles",
     title: "Estudio Bíblico",
     day: "Miércoles",
-    time: "7:00 PM",
+    time: "7:00 PM CST",
     description: "Profundizamos juntos en la Palabra de Dios.",
     icon: "book",
   },
@@ -37,7 +42,7 @@ export const serviceTimes: ServiceTime[] = [
     id: "jovenes",
     title: "Jóvenes",
     day: "Viernes",
-    time: "7:30 PM",
+    time: "Consulta en sala",
     description: "Un espacio vibrante para la nueva generación.",
     icon: "star",
   },
@@ -45,7 +50,7 @@ export const serviceTimes: ServiceTime[] = [
     id: "ninos",
     title: "Iglesia de Niños",
     day: "Domingos",
-    time: "10:00 AM",
+    time: "Durante el servicio",
     description: "Enseñanza creativa y segura para los más pequeños.",
     icon: "heart",
   },

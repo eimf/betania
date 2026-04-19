@@ -1,8 +1,10 @@
 import { styled } from "@washingtonpost/wpds-ui-kit";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { betaniaColors } from "../theme/betaniaTheme";
 import SectionReveal from "./SectionReveal";
 import { useI18n } from "../i18n/I18nContext";
+import { MINISTRY_SLUGS } from "../data/ministrySlugs";
 
 const Section = styled("section", {
   padding: "$400 $100",
@@ -63,16 +65,23 @@ const accentColors = [
   betaniaColors.darkRed,
 ];
 
-const Card = styled("div", {
+const Card = styled(Link, {
+  display: "block",
   padding: "$150",
   borderRadius: "16px",
   border: `1px solid ${betaniaColors.borderGray}`,
   backgroundColor: betaniaColors.cream,
   transition: "all 0.3s ease",
   cursor: "pointer",
+  textDecoration: "none",
+  color: "inherit",
+  outline: "none",
   "&:hover": {
     transform: "translateY(-4px)",
     boxShadow: "0 12px 32px rgba(0,0,0,0.06)",
+  },
+  "&:focus-visible": {
+    boxShadow: `0 0 0 3px ${betaniaColors.cream}, 0 0 0 5px ${betaniaColors.mint}`,
   },
 });
 
@@ -130,7 +139,7 @@ export default function Ministries() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
               >
-                <Card>
+                <Card to={`/ministerios/${MINISTRY_SLUGS[i]}`}>
                   <CardDot style={{ backgroundColor: accent }} />
                   <CardTitle>{m.title}</CardTitle>
                   <CardDesc>{m.description}</CardDesc>

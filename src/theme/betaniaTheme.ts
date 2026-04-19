@@ -6,6 +6,11 @@ export const betaniaColors = {
   mintDark: "#3D8A65",
   black: "#111111",
   charcoal: "#1E1E1E",
+  /** Editorial / ref palette (hero, nav over imagery) */
+  nightSky: "#1A1D2B",
+  warmCream: "#FBF7F0",
+  paper: "#FFFCF7",
+  goldenAmber: "#C8922A",
   darkRed: "#A32328",
   deepRed: "#7B1A1E",
   gold: "#C8922A",
@@ -29,13 +34,13 @@ export const betaniaGlobalStyles = globalCss({
   body: {
     margin: 0,
     padding: 0,
-    backgroundColor: betaniaColors.cream,
+    backgroundColor: betaniaColors.warmCream,
     color: betaniaColors.charcoal,
     fontFamily: "'Inter', sans-serif",
     overflowX: "hidden",
   },
   "::selection": {
-    backgroundColor: betaniaColors.mint,
+    backgroundColor: betaniaColors.goldenAmber,
     color: "#fff",
   },
   "@media (prefers-reduced-motion: reduce)": {

@@ -21,19 +21,10 @@ interface FaqItem {
   a: string;
 }
 
-interface ThumbItem {
-  title: string;
-  meta: string;
-}
-
-interface PostItem {
-  text: string;
-  meta: string;
-}
-
 export interface Translations {
   nav: {
     brand: string;
+    live: string;
     horarios: string;
     queEsperar: string;
     conserjeria: string;
@@ -49,17 +40,27 @@ export interface Translations {
   };
   hero: {
     badge: string;
-    title1: string;
-    title2: string;
-    subtitle: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
+    headline: string;
+    subheadline: string;
+    ctaLive: string;
+    ctaPlanVisit: string;
+    ctaAbout: string;
     scroll: string;
+    imageAlt: string;
+  };
+  newHere: {
+    title: string;
+    cards: {
+      id: string;
+      title: string;
+      line: string;
+    }[];
   };
   serviceTimes: {
     label: string;
     title: string;
     subtitle: string;
+    scheduleSummary: string;
     directions: string;
     services: ServiceItem[];
   };
@@ -83,7 +84,8 @@ export interface Translations {
   };
   story: {
     label: string;
-    title: string;
+    titleLine1: string;
+    titleLine2: string;
     narrative1: string;
     narrative2: string;
     verse: string;
@@ -95,7 +97,10 @@ export interface Translations {
     title: string;
     subtitle: string;
     learnMore: string;
+    pageBack: string;
+    pageContactCta: string;
     items: { title: string; description: string }[];
+    detailPages: { intro: string; paragraphs: string[] }[];
   };
   baptisms: {
     label: string;
@@ -117,10 +122,9 @@ export interface Translations {
     label: string;
     title: string;
     subtitle: string;
-    subscribe: string;
-    follow: string;
-    ytThumbs: ThumbItem[];
-    fbPosts: PostItem[];
+    youtubeComingSoon: string;
+    facebookFollowLead: string;
+    comingSoon: string;
   };
   donations: {
     label: string;

@@ -1,6 +1,6 @@
 import { styled } from "@washingtonpost/wpds-ui-kit";
 import { motion } from "framer-motion";
-import { siteInfo } from "../data/siteData";
+import { googleMapsSearchUrl, siteInfo } from "../data/siteData";
 import { betaniaColors } from "../theme/betaniaTheme";
 import SectionReveal from "./SectionReveal";
 import { useI18n } from "../i18n/I18nContext";
@@ -43,6 +43,16 @@ const SectionSub = styled("p", {
   lineHeight: 1.6,
   color: betaniaColors.textMuted,
   maxWidth: "520px",
+  marginBottom: "$100",
+});
+
+const ScheduleSummary = styled("p", {
+  fontFamily: "'Inter', sans-serif",
+  fontSize: "clamp(1.0625rem, 2.2vw, 1.25rem)",
+  fontWeight: 600,
+  lineHeight: 1.45,
+  color: betaniaColors.mintDark,
+  maxWidth: "640px",
   marginBottom: "$200",
 });
 
@@ -146,6 +156,7 @@ export default function ServiceTimes() {
           <SectionLabel>{t.serviceTimes.label}</SectionLabel>
           <SectionTitle>{t.serviceTimes.title}</SectionTitle>
           <SectionSub>{t.serviceTimes.subtitle}</SectionSub>
+          <ScheduleSummary>{t.serviceTimes.scheduleSummary}</ScheduleSummary>
         </SectionReveal>
 
         <Grid>
@@ -178,7 +189,7 @@ export default function ServiceTimes() {
           ))}
         </Grid>
 
-        <AddressRow>
+        <AddressRow id="ubicacion">
           <svg
             width="18"
             height="18"
@@ -192,7 +203,7 @@ export default function ServiceTimes() {
           </svg>
           <AddressText>{siteInfo.address}</AddressText>
           <DirectionsLink
-            href="https://maps.google.com"
+            href={googleMapsSearchUrl}
             target="_blank"
             rel="noopener noreferrer"
           >

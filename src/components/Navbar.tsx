@@ -1,8 +1,10 @@
 import { styled } from "@washingtonpost/wpds-ui-kit";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { betaniaColors } from "../theme/betaniaTheme";
 import { useI18n } from "../i18n/I18nContext";
+import { anchors, externalUrls, homeLinkTo } from "../data/links";
 
 const Nav = styled("nav", {
   position: "fixed",
@@ -10,7 +12,7 @@ const Nav = styled("nav", {
   left: 0,
   right: 0,
   zIndex: 300,
-  transition: "background-color 0.3s ease, box-shadow 0.3s ease",
+  transition: "background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease",
   padding: "0 $200",
   "@sm": { padding: "0 $100" },
 });
@@ -25,7 +27,7 @@ const NavInner = styled("div", {
   "@sm": { height: "60px" },
 });
 
-const Logo = styled("a", {
+const Logo = styled(Link, {
   fontFamily: "'Cormorant Garamond', serif",
   fontWeight: 700,
   fontSize: "1.5rem",
@@ -33,30 +35,62 @@ const Logo = styled("a", {
   textDecoration: "none",
   display: "flex",
   alignItems: "center",
-  gap: "$050",
   letterSpacing: "-0.02em",
+  outline: "none",
+  flexShrink: 0,
+  "&:focus-visible": {
+    boxShadow: `0 0 0 3px rgba(200,146,42,0.45)`,
+    borderRadius: "4px",
+  },
 });
 
 const NavLinks = styled("div", {
   display: "flex",
   alignItems: "center",
-  gap: "$125",
+  gap: "$075",
+  flexWrap: "wrap",
+  justifyContent: "flex-end",
   "@sm": { display: "none" },
   "@md": { display: "none" },
 });
 
-const NavLink = styled("a", {
+const NavLink = styled(Link, {
   fontFamily: "'Inter', sans-serif",
   fontSize: "0.8125rem",
   fontWeight: 500,
   color: "inherit",
   textDecoration: "none",
-  opacity: 0.85,
+  opacity: 0.9,
   transition: "opacity 0.2s ease",
+  outline: "none",
+  whiteSpace: "nowrap",
   "&:hover": { opacity: 1 },
+  "&:focus-visible": {
+    opacity: 1,
+    boxShadow: `0 0 0 3px rgba(200,146,42,0.4)`,
+    borderRadius: "4px",
+  },
 });
 
-const CtaButton = styled("a", {
+const ExternalNavLink = styled("a", {
+  fontFamily: "'Inter', sans-serif",
+  fontSize: "0.8125rem",
+  fontWeight: 500,
+  color: "inherit",
+  textDecoration: "none",
+  opacity: 0.9,
+  transition: "opacity 0.2s ease",
+  outline: "none",
+  whiteSpace: "nowrap",
+  "&:hover": { opacity: 1 },
+  "&:focus-visible": {
+    opacity: 1,
+    boxShadow: `0 0 0 3px rgba(200,146,42,0.4)`,
+    borderRadius: "4px",
+  },
+});
+
+const CtaButton = styled(Link, {
   fontFamily: "'Inter', sans-serif",
   fontSize: "0.8125rem",
   fontWeight: 600,
@@ -65,6 +99,11 @@ const CtaButton = styled("a", {
   textDecoration: "none",
   transition: "all 0.2s ease",
   cursor: "pointer",
+  outline: "none",
+  flexShrink: 0,
+  "&:focus-visible": {
+    boxShadow: `0 0 0 3px rgba(200,146,42,0.45)`,
+  },
 });
 
 const LangToggle = styled("button", {
@@ -74,14 +113,20 @@ const LangToggle = styled("button", {
   letterSpacing: "0.05em",
   padding: "$025 $075",
   borderRadius: "9999px",
-  border: `1px solid ${betaniaColors.borderGray}`,
+  borderWidth: "1px",
+  borderStyle: "solid",
   backgroundColor: "transparent",
   color: "inherit",
   cursor: "pointer",
   transition: "all 0.2s ease",
+  outline: "none",
+  flexShrink: 0,
   "&:hover": {
-    backgroundColor: "rgba(93,184,140,0.1)",
-    borderColor: betaniaColors.mint,
+    backgroundColor: "rgba(200,146,42,0.12)",
+    borderColor: betaniaColors.goldenAmber,
+  },
+  "&:focus-visible": {
+    boxShadow: `0 0 0 3px rgba(200,146,42,0.4)`,
   },
 });
 
@@ -92,30 +137,60 @@ const MobileMenuButton = styled("button", {
   cursor: "pointer",
   padding: "$050",
   color: "inherit",
+  outline: "none",
   "@sm": { display: "flex" },
   "@md": { display: "flex" },
+  "&:focus-visible": {
+    boxShadow: `0 0 0 3px rgba(200,146,42,0.4)`,
+    borderRadius: "4px",
+  },
 });
 
 const MobileOverlay = styled("div", {
   position: "fixed",
   inset: 0,
   zIndex: 299,
-  backgroundColor: betaniaColors.black,
+  backgroundColor: betaniaColors.nightSky,
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  gap: "$200",
+  gap: "$100",
+  padding: "$200",
 });
 
-const MobileLink = styled("a", {
+const MobileLink = styled(Link, {
   fontFamily: "'Cormorant Garamond', serif",
-  fontSize: "2rem",
+  fontSize: "1.85rem",
   fontWeight: 600,
-  color: "#fff",
+  color: betaniaColors.paper,
   textDecoration: "none",
-  opacity: 0.9,
+  opacity: 0.94,
+  outline: "none",
+  textAlign: "center",
   "&:hover": { opacity: 1 },
+  "&:focus-visible": {
+    opacity: 1,
+    textDecoration: "underline",
+    textUnderlineOffset: "6px",
+  },
+});
+
+const MobileExternalLink = styled("a", {
+  fontFamily: "'Cormorant Garamond', serif",
+  fontSize: "1.85rem",
+  fontWeight: 600,
+  color: betaniaColors.paper,
+  textDecoration: "none",
+  opacity: 0.94,
+  outline: "none",
+  textAlign: "center",
+  "&:hover": { opacity: 1 },
+  "&:focus-visible": {
+    opacity: 1,
+    textDecoration: "underline",
+    textUnderlineOffset: "6px",
+  },
 });
 
 export default function Navbar() {
@@ -128,24 +203,29 @@ export default function Navbar() {
     setScrolled(latest > 60);
   });
 
-  const navItems = [
-    { label: t.nav.horarios, href: "#horarios" },
-    { label: t.nav.queEsperar, href: "#que-esperar" },
-    { label: t.nav.conserjeria, href: "#conserjeria" },
-    { label: t.nav.historia, href: "#historia" },
-    { label: t.nav.ministerios, href: "#ministerios" },
-    { label: t.nav.bautismos, href: "#bautismos" },
-    { label: t.nav.conectar, href: "#conectar" },
-    { label: t.nav.donaciones, href: "#donaciones" },
+  const internalNav = [
+    { label: t.nav.horarios, to: homeLinkTo(anchors.horarios) },
+    { label: t.nav.queEsperar, to: homeLinkTo(anchors.queEsperar) },
+    { label: t.nav.historia, to: homeLinkTo(anchors.historia) },
+    { label: t.nav.ministerios, to: homeLinkTo(anchors.ministerios) },
+    { label: t.nav.conectar, to: homeLinkTo(anchors.conectar) },
   ];
 
+  const externalNav = [
+    { label: t.nav.live, href: externalUrls.liveWatch },
+  ] as const;
+
   const bgColor = scrolled
-    ? "rgba(255,255,255,0.95)"
-    : "rgba(255,255,255,0)";
-  const textColor = betaniaColors.black;
-  const shadow = scrolled ? "0 1px 8px rgba(0,0,0,0.06)" : "none";
+    ? "rgba(251,247,240,0.96)"
+    : "rgba(251,247,240,0)";
+  const textColor = scrolled ? betaniaColors.charcoal : betaniaColors.paper;
+  const shadow = scrolled ? "0 1px 8px rgba(0,0,0,0.08)" : "none";
 
   const toggleLang = () => setLocale(locale === "es" ? "en" : "es");
+
+  const langBorder = scrolled
+    ? betaniaColors.borderGray
+    : "rgba(255,252,247,0.32)";
 
   return (
     <>
@@ -158,35 +238,54 @@ export default function Navbar() {
         }}
       >
         <NavInner>
-          <Logo href="#">{t.nav.brand}</Logo>
+          <Logo to={homeLinkTo(anchors.hero)}>{t.nav.brand}</Logo>
           <NavLinks>
-            {navItems.map((item) => (
-              <NavLink key={item.href} href={item.href}>
+            {internalNav.map((item) => (
+              <NavLink key={item.to.hash} to={item.to}>
                 {item.label}
               </NavLink>
             ))}
+            {externalNav.map((item) => (
+              <ExternalNavLink
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.label}
+              </ExternalNavLink>
+            ))}
+            <LangToggle
+              type="button"
+              onClick={toggleLang}
+              aria-label={locale === "es" ? "Switch to English" : "Cambiar a español"}
+              style={{ borderColor: langBorder }}
+            >
+              {locale === "es" ? "EN" : "ES"}
+            </LangToggle>
             <CtaButton
-              href="#contacto"
+              to={homeLinkTo("#contacto")}
               style={{
-                backgroundColor: betaniaColors.darkRed,
-                color: "#fff",
-                border: "none",
+                backgroundColor: scrolled
+                  ? betaniaColors.goldenAmber
+                  : "rgba(255,255,255,0.12)",
+                color: scrolled ? "#fff" : betaniaColors.paper,
+                border: scrolled
+                  ? "none"
+                  : "1px solid rgba(255,252,247,0.32)",
               }}
             >
               {t.nav.cta}
             </CtaButton>
-            <LangToggle
-              onClick={toggleLang}
-              aria-label={locale === "es" ? "Switch to English" : "Cambiar a Espanol"}
-            >
-              {locale === "es" ? "EN" : "ES"}
-            </LangToggle>
           </NavLinks>
           <MobileMenuButton
+            type="button"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav-panel"
             aria-label={mobileOpen ? t.nav.closeMenu : t.nav.openMenu}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
               {mobileOpen ? (
                 <path
                   d="M6 6L18 18M6 18L18 6"
@@ -208,12 +307,14 @@ export default function Navbar() {
 
       {mobileOpen && (
         <MobileOverlay
+          id="mobile-nav-panel"
           as={motion.div}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <button
+            type="button"
             onClick={() => setMobileOpen(false)}
             aria-label={t.nav.closeMenu}
             style={{
@@ -222,11 +323,11 @@ export default function Navbar() {
               right: "1.25rem",
               background: "none",
               border: "none",
-              color: "#fff",
+              color: betaniaColors.paper,
               cursor: "pointer",
             }}
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
               <path
                 d="M6 6L18 18M6 18L18 6"
                 stroke="currentColor"
@@ -235,52 +336,80 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          {navItems.map((item, i) => (
+
+          {internalNav.map((item, i) => (
             <motion.div
-              key={item.href}
-              initial={{ opacity: 0, y: 20 }}
+              key={item.to.hash}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.06 }}
+              transition={{ delay: i * 0.05 }}
             >
-              <MobileLink
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-              >
+              <MobileLink to={item.to} onClick={() => setMobileOpen(false)}>
                 {item.label}
               </MobileLink>
             </motion.div>
           ))}
+
+          {externalNav.map((item, i) => (
+            <motion.div
+              key={item.href}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: (internalNav.length + i) * 0.05 }}
+            >
+              <MobileExternalLink
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileOpen(false)}
+              >
+                {item.label}
+              </MobileExternalLink>
+            </motion.div>
+          ))}
+
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: navItems.length * 0.06 }}
+            transition={{
+              delay: (internalNav.length + externalNav.length) * 0.05,
+            }}
+            style={{ marginTop: "$075" }}
+          >
+            <LangToggle
+              type="button"
+              onClick={toggleLang}
+              aria-label={locale === "es" ? "Switch to English" : "Cambiar a español"}
+              style={{
+                color: betaniaColors.paper,
+                borderColor: "rgba(255,252,247,0.35)",
+              }}
+            >
+              {locale === "es" ? "EN" : "ES"}
+            </LangToggle>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: (internalNav.length + externalNav.length + 1) * 0.05,
+            }}
           >
             <CtaButton
-              href="#contacto"
+              to={homeLinkTo("#contacto")}
               onClick={() => setMobileOpen(false)}
               style={{
-                backgroundColor: betaniaColors.darkRed,
+                backgroundColor: betaniaColors.goldenAmber,
                 color: "#fff",
                 fontSize: "1rem",
                 padding: "0.75rem 2rem",
                 marginTop: "0.5rem",
+                border: "none",
               }}
             >
               {t.nav.cta}
             </CtaButton>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: (navItems.length + 1) * 0.06 }}
-          >
-            <LangToggle
-              onClick={toggleLang}
-              aria-label={locale === "es" ? "Switch to English" : "Cambiar a Espanol"}
-              style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}
-            >
-              {locale === "es" ? "EN" : "ES"}
-            </LangToggle>
           </motion.div>
         </MobileOverlay>
       )}
