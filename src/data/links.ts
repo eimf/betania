@@ -35,7 +35,7 @@ export const externalUrls = {
 /** Hero imagery (from design reference). */
 export const heroImages = {
   /** Full-bleed hero photograph */
-  heroBg: "/hero-bg.webp",
+  heroBg: "/img/bg_logo.PNG",
   /** Optional secondary asset for future layouts */
   primarySrc: "/community.webp",
   subtleBgSrc: "/texture-warm.webp",
