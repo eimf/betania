@@ -92,6 +92,12 @@ export interface Translations {
     verseRef: string;
     pills: string[];
   };
+  pastors: {
+    label: string;
+    title: string;
+    subtitle: string;
+    imageAlt: string;
+  };
   ministries: {
     label: string;
     title: string;

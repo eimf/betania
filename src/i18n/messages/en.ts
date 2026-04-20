@@ -164,6 +164,13 @@ const en: Translations = {
     verseRef: "John 3:16",
     pills: ["Welcome home", "Love that gives life", "Faith that restores"],
   },
+  pastors: {
+    label: "Our Pastors",
+    title: "Our Pastors",
+    subtitle:
+      "With love and faithfulness, they serve our church and our city—guiding us to follow Jesus.",
+    imageAlt: "Our pastors",
+  },
   ministries: {
     label: "Ministries",
     title: "Find your place",

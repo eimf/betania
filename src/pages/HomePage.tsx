@@ -6,6 +6,7 @@ import ServiceTimes from "../components/ServiceTimes";
 import WhatToExpect from "../components/WhatToExpect";
 import Conserjeria from "../components/Conserjeria";
 import StorySection from "../components/StorySection";
+import PastorsSection from "../components/PastorsSection";
 import Ministries from "../components/Ministries";
 import Bautismos from "../components/Bautismos";
 import WatchConnect from "../components/WatchConnect";
@@ -42,6 +43,7 @@ export default function HomePage() {
       <WhatToExpect />
       <Conserjeria />
       <StorySection />
+      <PastorsSection />
       <Ministries />
       <Bautismos />
       <WatchConnect />

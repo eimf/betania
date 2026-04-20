@@ -164,6 +164,13 @@ const es: Translations = {
     verseRef: "Juan 3:16",
     pills: ["Bienvenido a casa", "Amor que da vida", "Fe que restaura"],
   },
+  pastors: {
+    label: "Nuestros pastores",
+    title: "Nuestros pastores",
+    subtitle:
+      "Con amor y fidelidad, sirven a nuestra iglesia y a nuestra ciudad, guiándonos a seguir a Jesús.",
+    imageAlt: "Nuestros pastores",
+  },
   ministries: {
     label: "Ministerios",
     title: "Encuentra tu lugar",
